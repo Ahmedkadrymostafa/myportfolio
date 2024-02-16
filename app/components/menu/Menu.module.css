@@ -1,0 +1,35 @@
+.menu {
+    background: var(--dark-light-bg);
+    width: 5vw;
+    height: calc(100vh - 40px);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    transition: 0.8s;
+    z-index: 1;
+  }
+  @media (max-width: 924px) {
+    .menu {
+      height: 100vh;
+      width: 0;
+      
+    }
+  }
+
+  .menuLink {
+    margin-bottom: 12px;
+    margin-left: 30px;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--third-color);
+  }
+  .menuLinkActive {
+    margin-bottom: 12px;
+    margin-left: 30px;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--second-color);
+    text-shadow: var(--third-color) 2px -2px 2px;
+  }

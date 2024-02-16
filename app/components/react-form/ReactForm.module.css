@@ -1,0 +1,46 @@
+.artFormField {
+    position: relative;
+    margin-bottom: 30px;
+}
+.artFormInput {
+    height: 50px;
+    width: 100%;
+    background: var(--light-bg);
+    border: none;
+    color: var(--second-color);
+    padding-left: 65px;
+    padding-right: 15px;
+    -webkit-box-shadow: inset 0 1px 4px 0 rgba(15, 15, 20, 0.1);
+    box-shadow: inset 0 1px 4px 0 rgba(15, 15, 20, 0.1);
+    margin-bottom: 0;
+    -webkit-transition: 0.4s ease-in-out;
+    transition: 0.4s ease-in-out;
+}
+.artFormLabel {
+    text-align: center;
+    color: var(--third-color);
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    background: var(--dark-light-bg);
+    top: 0;
+    left: 0;
+    text-transform: uppercase;
+    font-size: 15px;
+    line-height: 50px;
+    letter-spacing: 1px;
+    font-weight: 500;
+    -webkit-transition: 0.4s ease-in-out;
+    transition: 0.4s ease-in-out;
+    cursor: text;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.artFormInput:focus {
+    outline: none;
+}
+.artFormInput:focus + .artFormLabel {
+    color: #191923;
+    background: var(--main-color);
+}

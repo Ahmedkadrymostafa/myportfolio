@@ -1,0 +1,145 @@
+.info {
+    width: 22vw;
+    position: fixed;
+    z-index: 1;
+    background: var(--light-bg);
+}
+@media (max-width: 924px) {
+    .info {
+        width: 44vw;
+    }
+}
+@media (max-width: 768px) {
+    .info {
+      width: 65vw;
+    }
+}
+.artLampLight::before {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    right: 1px;
+    background: var(--second-color);
+    height: 23px;
+    width: 23px;
+    border-radius: 50%;
+    -webkit-animation: puls 1s infinite;
+    animation: puls 1s infinite;
+}
+@keyframes puls {
+    0% {
+        -webkit-transform: scale(0.6);
+        transform: scale(0.6);
+        opacity: 1;
+    }
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+.artLamp {
+    position: absolute;
+    bottom: 3px;
+    right: 5px;
+    height: 15px;
+    width: 15px;
+    background: var(--main-color);
+    border-radius: 50%;
+    z-index: 0;
+    -webkit-transition: 0.4s ease-in-out;
+    transition: 0.4s ease-in-out;
+}
+.artLamp::before {
+    content: '';
+    position: absolute;
+    height: 12px;
+    width: 12px;
+    right: 0px;
+    top: 5px;
+    opacity: 0;
+    background: var(--main-bg);
+    pointer-events: none;
+    -webkit-transform: translateX(20px) rotate(45deg);
+    transform: translateX(20px) rotate(45deg);
+    -webkit-transition: 0.4s ease-in-out;
+    transition: 0.4s ease-in-out;
+}
+.artLamp::after {
+    position: relative;
+    content: 'I am available for freelance hire';
+    width: 115px;
+    display: block;
+    padding: 5px 10px;
+    top: -10px;
+    left: 8px;
+    font-size: 10px;
+    font-weight: 200;
+    color: var(--third-color);
+    -webkit-box-shadow: 0 1px 4px 0 rgba(15, 15, 20, 0.1);
+    box-shadow: 0 1px 4px 0 rgba(15, 15, 20, 0.1);
+    background: var(--main-bg);
+    opacity: 0;
+    pointer-events: none;
+    -webkit-transform: translateX(20px);
+    transform: translateX(20px);
+    -webkit-transition: 0.4s ease-in-out;
+    transition: 0.4s ease-in-out;
+    text-align: left;
+}
+.artLamp:hover:after, .artLamp:hover:before {
+    opacity: 1 !important;
+}
+.artLampRed {
+    position: absolute;
+    bottom: 3px;
+    right: 5px;
+    height: 15px;
+    width: 15px;
+    background: red;
+    /* background: var(--main-color); */
+    border-radius: 50%;
+    z-index: 0;
+    -webkit-transition: 0.4s ease-in-out;
+    transition: 0.4s ease-in-out;
+}
+.artLampRed::before {
+    content: '';
+    position: absolute;
+    height: 12px;
+    width: 12px;
+    right: 0px;
+    top: 5px;
+    opacity: 0;
+    background: var(--main-bg);
+    pointer-events: none;
+    -webkit-transform: translateX(20px) rotate(45deg);
+    transform: translateX(20px) rotate(45deg);
+    -webkit-transition: 0.4s ease-in-out;
+    transition: 0.4s ease-in-out;
+}
+.artLampRed::after {
+    position: relative;
+    content: 'I am not available to hire';
+    width: 115px;
+    display: block;
+    padding: 5px 10px;
+    top: -10px;
+    left: 8px;
+    font-size: 10px;
+    font-weight: 200;
+    color: var(--third-color);
+    -webkit-box-shadow: 0 1px 4px 0 rgba(15, 15, 20, 0.1);
+    box-shadow: 0 1px 4px 0 rgba(15, 15, 20, 0.1);
+    background: var(--main-bg);
+    opacity: 0;
+    pointer-events: none;
+    -webkit-transform: translateX(20px);
+    transform: translateX(20px);
+    -webkit-transition: 0.4s ease-in-out;
+    transition: 0.4s ease-in-out;
+    text-align: left;
+}
+.artLampRed:hover:after, .artLampRed:hover:before {
+    opacity: 1 !important;
+}
