@@ -69,7 +69,7 @@ const Skills = (props: any) => {
 
 
   return (
-    <div className='scrolling mt-52  mx-auto w-4/5 pb-16'>
+    <div className='scrolling mt-56  mx-auto w-4/5 pb-16'>
         <div className="addresses mt-2 mb-3">
             <div className='flex justify-between'>
                 <p className="white text-xs">Residence:</p>
