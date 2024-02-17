@@ -7,7 +7,7 @@ const RecommendationCard = (props: any) => {
     <div>
         <div className="relative p-5 main-bg mt-6 mb-9 h-60 max-[768px]:w-full">
                 <div className='absolute -top-6 right-8'>
-                    <Image className='rounded-full' src={props.img} width={65} height={65} alt='rater image' />
+                    <Image className='rounded-full' src={props.img} width={85} height={83} alt='rater image' />
                 </div>
                 <div className="flex flex-col justify-between h-full">
                   <div className="flex flex-col">

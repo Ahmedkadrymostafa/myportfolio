@@ -23,11 +23,9 @@ const ReactForm = () => {
             'dB8dmNlajaZr6RDrf'
           )
             .then((response: any) => {
-              console.log('SUCCESS!', response.status, response.text);
               toast.success("Message Sent !");
             })
             .catch((err: any) => {
-                console.log('FAILED...', err);
                 toast.error("Failed to send Message, please try again !")
             });
         
@@ -36,9 +34,9 @@ const ReactForm = () => {
 
   return (
     <div>
-        <ToastContainer />
+        <ToastContainer className="max-[480px]top-12" />
 
-        <div>
+        <div className="main-margin max-[525px]:m-0">
           <Heading title="get in touch" />
           <div className='main-bg p-8'>
             <form onSubmit={handleSubmit(onSubmit)}>

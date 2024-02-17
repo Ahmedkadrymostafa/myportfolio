@@ -6,8 +6,8 @@ const Info = (props: any) => {
     
         <div className={styles.info}>
           <div className='flex content-center flex-col items-center py-6'>
-            <div className="relative w-24 h-24">
-              <Image src={props.img} className="rounded-full max-h-full" width={92} height={92} alt="profile image" />
+            <div className="relative">
+              <Image src={props.img} className="rounded-full max-h-full" width={120} height={117} alt="profile image" />
               
               {props.status === "available" ?
                 <div className={styles.artLampLight}>

@@ -48,9 +48,9 @@ const Projects = () => {
            
             {projectsData.map((project) => (
                 <Link key={project.id} href={`${"/" + project.id}`}>
-                    <div className="card relative w-96 h-60 overflow-hidden max-[425px]:w-80">
+                    <div className="card relative w-96 h-60 overflow-hidden max-[425px]:w-full">
                         <Image className="img-card h-full w-full duration-500" width={1000} height={1000} src={project.data.mainimg} alt="project image" />
-                        <div className="card-content absolute flex flex-col main-bg pt-4 px-6 h-auto opacity-0 bottom-0 duration-1000 w-96 max-[425px]:w-80 max-[768px]:opacity-100">
+                        <div className="card-content absolute flex flex-col main-bg pt-4 px-6 h-auto opacity-0 bottom-0 duration-1000 w-96 max-[425px]:w-full max-[768px]:opacity-100">
                             <p className="capitalize white text-base mb-1">{project.data.title}</p>
                             <p className="light-gray text-sm mb-3">{project.data.heading}</p>
                             <div className="flex justify-between mb-3">

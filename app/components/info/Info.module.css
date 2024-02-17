@@ -11,14 +11,14 @@
 }
 @media (max-width: 768px) {
     .info {
-      width: 65vw;
+      width: 70vw;
     }
 }
 .artLampLight::before {
     content: '';
     position: absolute;
     bottom: -1px;
-    right: 1px;
+    right: -3px;
     background: var(--second-color);
     height: 23px;
     width: 23px;
@@ -41,7 +41,7 @@
 .artLamp {
     position: absolute;
     bottom: 3px;
-    right: 5px;
+    right: 1px;
     height: 15px;
     width: 15px;
     background: var(--main-color);

@@ -80,7 +80,9 @@ const LeftSection = () => {
       {fetchedData === false ? <div className={styles.leftSection}><Loading /></div> :
       
       <div className={styles.leftSection} ref={leftSection}>
-          <div className="dots dots-style" ref={dots} onClick={activeDots}><HiDotsVertical /></div>               
+          <div className="relative w-full">
+            <div className="dots dots-style" ref={dots} onClick={activeDots}><HiDotsVertical /></div>
+          </div>               
           <Info name={informationData?.name} job={informationData.job} img={informationData.img} status={informationData.status} />                  
           <Skills
           cvlink={informationData.cvlink}
