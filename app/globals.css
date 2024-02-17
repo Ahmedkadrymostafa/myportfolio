@@ -148,7 +148,6 @@ img {
 }
 .active {
   width: calc(18vw - 20px) !important;
-  /* right: 10%; */
 }
 .active-left-section {
   left: 0;
@@ -244,6 +243,11 @@ img {
     padding: 0;
   }
 }
+@media (max-width: 480px) {
+  .Toastify__toast-container--top-left, .Toastify__toast-container--top-center, .Toastify__toast-container--top-right {
+    top: 50px !important;
+  }
+}
 
 /* Hide scrollbar for IE, Edge and Firefox */
 .rightSection {
@@ -264,7 +268,6 @@ img {
   position: absolute;
   height: 100%;
   width: 100%;
-  /* background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(30, 30, 40, 0.93)), color-stop(70%, rgba(30, 30, 40, 0.96)), color-stop(80%, rgba(30, 30, 40, 0.99)), to(#1e1e28)); */
   background: var(--overlay)
 }
 .landing-bg {
@@ -320,8 +323,6 @@ img {
     rotate: -2deg;
   }
   .card-content {
-    /* bottom: 0; */
-    /* top: 50%; */
     opacity: 1;
   }
 }
