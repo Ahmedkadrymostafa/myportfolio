@@ -1,10 +1,9 @@
 'use client'
-import { FaAngleRight } from "react-icons/fa";
-import Link from "next/link";
 import Heading from "../main-heading/Heading";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { db } from "@/app/firebase/firebase";
 import { collection, getDocs } from "firebase/firestore";
+import HoverCard from "../cards/HoverCard";
 
 interface IServicesData {
     data: {
@@ -30,6 +29,7 @@ const Services = () => {
         fetchData()
         
     }, [])
+
   return (
     <div className="relative z-10 m-6">
         <Heading title="my services" />
@@ -37,22 +37,10 @@ const Services = () => {
 
             {
                 servicesData.map((item) => (
-                    <div key={item.id} className="flex flex-col justify-between p-5 main-bg  service-card">
-                        <div>
-                            <h1 className='capitalize white mb-4'>{item.data.name}</h1>
-                            <p className='light-gray text-xs mb-4 leading-5 '>{item.data.content}</p>
-                        </div>
-                        <Link href="/contact">
-                            <button className='flex items-center w-fit uppercase text-xs yellow tracking-widest'>
-                                <span className="hover:mr-1 hover:underline duration-300">order now</span>
-                                <FaAngleRight />
-                            </button>
-                        </Link>
-                    </div>
+                    <HoverCard key={item.id} name={item.data.name} content={item.data.content} />
                 ))
             }
-
-
+            
         </div>
     </div>
   )

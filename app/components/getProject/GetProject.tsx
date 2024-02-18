@@ -8,17 +8,19 @@ import MainBanner from '../banners/MainBanner'
 import Footer from '../footer/Footer'
 import { useState, useEffect } from 'react'
 import { db } from '../../firebase/firebase'
-import { DocumentData, doc, getDoc } from 'firebase/firestore'
+import { doc, getDoc } from 'firebase/firestore'
 import Loading from '../loading/Loading'
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Mousewheel, Keyboard } from 'swiper/modules';
-// Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
+import { Pagination, EffectCube} from 'swiper/modules';
 import Heading from '../main-heading/Heading'
 import ServicesCard from '../cards/ProjectCard';
 import NotFound from '@/app/not-found'
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/effect-cube';
+import 'swiper/css/pagination';
+
+// import './styles.css';
 
 const GetProject = ( {params}: {params: any} ) => {
   const [ projectData, setProjectsData ] = useState<any>({})
@@ -64,7 +66,7 @@ const GetProject = ( {params}: {params: any} ) => {
           <div className='relative z-10 mt-6 mx-6'>
                   <Heading title="result" />
 
-                  <Swiper
+                  {/* <Swiper
                     cssMode={true}
                     slidesPerView={2}
                     navigation={true}
@@ -95,9 +97,34 @@ const GetProject = ( {params}: {params: any} ) => {
                         
                       ))}
 
+                  </Swiper> */}
+
+
+            <Swiper
+                    effect={'cube'}
+                    grabCursor={true}
+                    pagination={{
+                      clickable: true,
+                    }}
+                    cubeEffect={{
+                      shadow: false,
+                      slideShadows: false,
+                      shadowOffset: 20,
+                      shadowScale: 0.94,
+                    }}
+                    modules={[EffectCube, Pagination]}
+                    className="mySwiper"
+                  >
+                    {projectData.projectimgs.map((img: any) => (
+                        <SwiperSlide key="image slider">
+                          <ServicesCard img={img} />
+                            
+                        </SwiperSlide>
+                        
+                      ))}
+                    
                   </Swiper>
             </div>
-
 
             <Recommendations headingTitle="client reviews" />
             <Experience />
