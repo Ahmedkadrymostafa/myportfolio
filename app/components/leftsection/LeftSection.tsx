@@ -9,22 +9,6 @@ import { getDoc, doc } from "firebase/firestore"
 import { db } from "@/app/firebase/firebase"
 import Loading from "../loading/Loading"
 
-interface IInformationData {
-  
-    age: string;
-    city: string;
-    cvlink: string;
-    facebook: string;
-    github: string;
-    instagram: string;
-    linkedin: string;
-    img: string;
-    job: string;
-    name: string;
-    residence: string;
-  
-}
-
 const LeftSection = () => {
   const leftSection: any = useRef();
   const dots: any = useRef();
@@ -35,12 +19,10 @@ const LeftSection = () => {
   const activeDots = () => {
     if (active === false) {
       setActive(true)
-      console.log("open")
       leftSection.current.classList.toggle("active-left-section")
       dots.current.classList.toggle("active-dots")
     }else if (active === true) {
       setActive(false)
-      console.log("close")
       leftSection.current.classList.toggle("active-left-section")
       dots.current.classList.toggle("active-dots")
     }

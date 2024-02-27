@@ -16,12 +16,10 @@ const Menu = () => {
         const element = menuElement.current
         if (active === false) {
             setActive(true)
-            console.log("open")
             element.classList.toggle("active")
             burgerIcon.current.classList.toggle("sm-burger-icon")
         }else if (active === true) {
             setActive(false)
-            console.log("close")
             element.classList.toggle("active")
             burgerIcon.current.classList.toggle("sm-burger-icon")
         }
