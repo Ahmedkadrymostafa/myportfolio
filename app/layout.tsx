@@ -14,7 +14,13 @@ export const metadata: Metadata = {
     template: "%s - Ahmed Kadry"
   },
   description: 'Welcome to my vibrant corner of the internet, where innovation meets expertise! I am thrilled to present my portfolio as a MERN (MongoDB, Express.js, React.js, Node.js) stack developer, showcasing my passion for crafting dynamic and immersive web experiences',
-  keywords: ['web development', 'mern stack developer', 'full stack developer', 'frontend developer', 'web developer portfolio']
+  generator: 'Next.js',
+  applicationName: 'Ahmed Kadry portfolio',
+  keywords: ['web development', 'mern stack developer', 'full stack developer', 'frontend developer', 'web developer portfolio', 'web development', 'wed developer'],
+  authors: [{ name: 'Ahmed Kadry', url: 'https://www.akadry.me' }],
+  creator: 'Ahmed Kadry',
+  publisher: 'Ahmed Kadry',
+  
 }
 
 
