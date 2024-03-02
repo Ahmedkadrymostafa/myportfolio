@@ -9,6 +9,7 @@ import Script from 'next/script'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://www.akadry.me'),
   title: {
     default: 'Ahmed Kadry',
     template: "%s - Ahmed Kadry"
@@ -20,20 +21,16 @@ export const metadata: Metadata = {
   authors: [{ name: 'Ahmed Kadry', url: 'https://www.akadry.me' }],
   creator: 'Ahmed Kadry',
   publisher: 'Ahmed Kadry',
+  alternates: {
+    canonical: '/',
+    
+  },
   openGraph: {
     title: 'Ahmed Kadry',
     description: 'Bring your idea to reality with a certified web developer',
-    url: 'https://www.akadry.me/opengraph-image.png',
+    url: 'https://www.akadry.me',
     siteName: 'Ahmed Kadry',
-    images: [
-      {
-        url: 'https://www.akadry.me/opengraph-image.png', // Must be an absolute URL
-        width: 1200,
-        height: 630,
-      },
-      
-    ],
-    
+    images: '/opengraph-image.png',
     type: 'website',
   },
   twitter: {
