@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Ahmed Kadry',
     description: 'Bring your idea to reality with a certified web developer',
-    url: 'https://www.akadry.me',
+    url: 'https://www.akadry.me/opengraph-image.png',
     siteName: 'Ahmed Kadry',
     images: [
       {
