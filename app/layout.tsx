@@ -20,6 +20,37 @@ export const metadata: Metadata = {
   authors: [{ name: 'Ahmed Kadry', url: 'https://www.akadry.me' }],
   creator: 'Ahmed Kadry',
   publisher: 'Ahmed Kadry',
+  openGraph: {
+    title: 'Ahmed Kadry',
+    description: 'Bring your idea to reality with a certified web developer',
+    url: 'https://www.akadry.me',
+    siteName: 'Ahmed Kadry',
+    images: [
+      {
+        url: 'https://www.akadry.me/opengraph-image.png', // Must be an absolute URL
+        width: 1200,
+        height: 630,
+      },
+      
+    ],
+    
+    type: 'website',
+  },
+  twitter: {
+    title: 'Ahmed Kadry',
+    description: 'Bring your idea to reality with a certified web developer',
+    site: 'Ahmed Kadry',
+    creator: "@AhmedKadry",
+    images: [
+      {
+        url: 'https://www.akadry.me/twitter-image.png', // Must be an absolute URL
+        width: 1200,
+        height: 630,
+        alt: "Bring your idea to reality with a certified web developer"
+      },
+      
+    ],
+  },
   
 }
 
