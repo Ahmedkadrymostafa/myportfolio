@@ -41,7 +41,7 @@ const Menu = () => {
   return (
     <div className={styles.menu} ref={menuElement}>
         <div>
-            <div  onClick={openMenu} className="light-gray-bg sm-burger-icon menu-icon" ref={burgerIcon}>             
+            <div  onClick={openMenu} className="sm-burger-icon menu-icon" ref={burgerIcon}>             
                 <FaBarsStaggered />
             </div>
             {
@@ -50,9 +50,9 @@ const Menu = () => {
                         {pathName == "/" && (
                             <div>home</div>
                         )}
-                        {/* {pathName == "/blogs" && (
+                        {pathName == "/blogs" && (
                             <div>blogs</div>
-                        )} */}
+                        )}
                         {pathName == "/contact" && (
                             <div>contact</div>
                         )}
@@ -63,6 +63,7 @@ const Menu = () => {
         {active && (
             <div  className="flex flex-col">
                 {pathName == "/" ? (<Link className={styles.menuLinkActive} href="/">home</Link>) : (<Link className={styles.menuLink} href="/">home</Link>)}
+                {pathName == "/blogs" ? (<Link className={styles.menuLinkActive} href="/blogs">blogs</Link>) : (<Link className={styles.menuLink} href="/blogs">blogs</Link>)}
                 {pathName == "/contact" ? (<Link className={styles.menuLinkActive} href="/contact">contact</Link>) : (<Link className={styles.menuLink} href="/contact">contact</Link>)}
                 
             </div>

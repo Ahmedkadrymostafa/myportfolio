@@ -27,6 +27,10 @@
 }
 @media (max-width: 768px) {
   .leftSection {
-    width: 70vw;
+    width: 85vw;
+    left: -85%;
+  }
+  .leftSection {
+    position: fixed;
   }
 }

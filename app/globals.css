@@ -32,6 +32,17 @@
   --third-color: #5c5c6f;
   --fourth-color: #c0c0ca;
 }
+/* Hide scrollbar for Chrome, Safari and Opera */
+html::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+html {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
 .glow-card {
   position: absolute;
   width: 100%;
@@ -78,6 +89,7 @@
     font-size: larger;
     font-weight: 900;
     cursor: pointer;
+    background-color: var(--light-bg);
 }
 .menu-active-page {
   rotate: 90deg;
@@ -173,8 +185,12 @@ img {
 }
 .dots {
   position: fixed;
-  left: 4%;
+  left: 1%;
   visibility: hidden;
+  background-color: var(--main-bg);
+  padding: 10px;
+  border-radius: 50%;
+  font-size: 24px;
 }
 .language-btn {
   background: var(--fourth-color);
@@ -208,22 +224,29 @@ img {
   .rightSection {
     height: 92vh;
     width: 100vw;
-    margin-top: 8vh;
+    margin-top: 6vh;
   }
   .sm-burger-icon {
-    transform: translateX(-3em);
-    background: none;
+    transform: translateX(-2em);
+    background-color: var(--main-bg);
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 24px;
+    width: fit-content;
+    margin-top: 5px;
   }
   .dots {
     visibility: visible;
   }
   .dots-style {
-    transform: translatey(110%);
+    transform: translatey(0%);
+    margin-top: 5px;
   }
 }
 @media (max-width: 768px) {
   .active-dots {
-    left: 63% !important;
+    left: 70% !important;
+    background: none;
   }
   .active {
     width: calc(50vw - 20px) !important;
@@ -257,11 +280,21 @@ img {
     margin: 0;
     padding: 0;
   }
+  /* height in mobile screen  */
+  body {
+    overflow: auto;
+  }
+  .rightSection {
+    height: auto;
+    overflow-y: unset;
+  }
+  
 }
 @media (max-width: 480px) {
   .Toastify__toast-container--top-left, .Toastify__toast-container--top-center, .Toastify__toast-container--top-right {
     top: 50px !important;
   }
+  
 }
 
 /* Hide scrollbar for IE, Edge and Firefox */
@@ -363,6 +396,11 @@ img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  height: 100vh;
+  position: fixed;
+  z-index: 1000;
+  width: 100vw;
+  background-color: #5c5c6f3d;
 }
 .loader {
   position: absolute;

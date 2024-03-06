@@ -23,7 +23,7 @@
 }
 @media (max-width: 768px) {
     .socialIcons {
-        width: 70vw;
+        width: 85vw;
         top: 196px;
         bottom: unset;
     }

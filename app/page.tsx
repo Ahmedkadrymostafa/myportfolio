@@ -10,6 +10,7 @@ import { db } from './firebase/firebase'
 import { useState, useEffect } from 'react'
 import { doc, getDoc } from "firebase/firestore"
 import Loading from './components/loading/Loading'
+import GetBlogs from './components/getBlogs/GetBlogs'
 
 export default function Home() {
   const [ landingData, setLandingData ] = useState<any>({});
@@ -26,10 +27,10 @@ export default function Home() {
           if (docSnap.exists()) {
               const result = docSnap.data();
               setLandingData(result)
-             
           }else {
               console.log("no data found")
           }
+          
         }
         
 
@@ -45,13 +46,13 @@ export default function Home() {
     
   return (
     <div>
-
     {fetchedData === false ? <Loading /> : <div>
       <Landing landingtitle={landingData.landingtitle} landingimg={landingData.landingimg} sequence={landingData.sequence} />
 
       <Experience />
       <Services />
       <Projects />
+      <GetBlogs />
       <Recommendations headingTitle="recommendations" />
       <Footer />
     </div> }

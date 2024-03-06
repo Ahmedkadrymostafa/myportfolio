@@ -7,7 +7,6 @@ import { HiDotsVertical } from "react-icons/hi";
 import { useState, useRef, useEffect } from "react";
 import { getDoc, doc } from "firebase/firestore"
 import { db } from "@/app/firebase/firebase"
-import Loading from "../loading/Loading"
 
 const LeftSection = () => {
   const leftSection: any = useRef();
@@ -59,27 +58,27 @@ const LeftSection = () => {
 
   return (    
     <>
-      {fetchedData === false ? <div className={styles.leftSection}><Loading /></div> :
+      {fetchedData === true &&
       
-      <div className={styles.leftSection} ref={leftSection}>
-          <div className="relative w-full">
-            <div className="dots dots-style" ref={dots} onClick={activeDots}><HiDotsVertical /></div>
-          </div>               
-          <Info name={informationData?.name} job={informationData.job} img={informationData.img} status={informationData.status} />                  
-          <Skills
-          cvlink={informationData.cvlink}
-          residence={informationData.residence}
-          city={informationData.city}
-          age={informationData.age}
-          />
-          <SocialIcons
-          facebook={informationData.facebook}
-          github={informationData.github}
-          linkedin={informationData.linkedin}
-          instagram={informationData.instagram}
-          />
-      </div>
-      }
+        <div className={styles.leftSection} ref={leftSection}>
+            <div className="relative w-full">
+              <div className="dots dots-style" ref={dots} onClick={activeDots}><HiDotsVertical /></div>
+            </div>               
+            <Info name={informationData?.name} job={informationData.job} img={informationData.img} status={informationData.status} />                  
+            <Skills
+            cvlink={informationData.cvlink}
+            residence={informationData.residence}
+            city={informationData.city}
+            age={informationData.age}
+            />
+            <SocialIcons
+            facebook={informationData.facebook}
+            github={informationData.github}
+            linkedin={informationData.linkedin}
+            instagram={informationData.instagram}
+            />
+        </div>
+      } 
     </>
   )
 }

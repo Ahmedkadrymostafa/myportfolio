@@ -5,6 +5,8 @@ import LeftSection from './components/leftsection/LeftSection'
 import Menu from './components/menu/Menu'
 import Providers from './providers'
 import Script from 'next/script'
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -25,29 +27,7 @@ export const metadata: Metadata = {
     canonical: '/',
     
   },
-  openGraph: {
-    title: 'Ahmed Kadry',
-    description: 'Bring your idea to reality with a certified web developer',
-    url: 'https://www.akadry.me',
-    siteName: 'Ahmed Kadry',
-    images: '/opengraph-image.png',
-    type: 'website',
-  },
-  twitter: {
-    title: 'Ahmed Kadry',
-    description: 'Bring your idea to reality with a certified web developer',
-    site: 'Ahmed Kadry',
-    creator: "@AhmedKadry",
-    images: [
-      {
-        url: 'https://www.akadry.me/twitter-image.png', // Must be an absolute URL
-        width: 1200,
-        height: 630,
-        alt: "Bring your idea to reality with a certified web developer"
-      },
-      
-    ],
-  },
+  
   
 }
 
@@ -60,9 +40,12 @@ export default function RootLayout({
 
 
   return (
-    <html lang="en">
+    <html lang="en" translate='no'>
+      <head>
+        <meta name='google' content='notranslate' />
+      </head>
       <body className={inter.className}>
-
+        <ToastContainer />
         <Providers>
 
             <LeftSection />

@@ -11,7 +11,7 @@
 }
 @media (max-width: 768px) {
     .info {
-      width: 70vw;
+      width: 85vw;
     }
 }
 .artLampLight::before {
