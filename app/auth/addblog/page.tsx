@@ -26,10 +26,12 @@ const Page = () => {
     const featured: any = useRef<HTMLInputElement>();
     const [user] = useAuthState(auth);
     const router = useRouter();
-    const userSession = sessionStorage.getItem('user');
-    // console.log(user);
-    if (!user) {
-        router.push("/auth")
+    
+    if (typeof window !== 'undefined') {
+        const userSession = sessionStorage.getItem('user');
+        if (!user && !userSession) {
+            router.push("/auth")
+        }
     }
 
     
@@ -94,7 +96,7 @@ const Page = () => {
             })
         })
     }
-    if (userSession && user) {
+    if (user) {
         return (
             
           <div className="relative main-margin">
