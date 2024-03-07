@@ -68,7 +68,7 @@ const GetBlogs = () => {
             blogsData.map((doc: any) => (
                 <SwiperSlide  key={doc.id} >
                     <div className='mb-11 w-fit mx-auto'>
-                        <BlogCard width={260} link={doc.id} img={doc.data.imgurl} title={doc.data.title} author={doc.data.author} date={doc.data.publishDate} />
+                        <BlogCard width={64} link={doc.id} img={doc.data.imgurl} title={doc.data.title} author={doc.data.author} date={doc.data.publishDate} />
                     </div>
                 </SwiperSlide>
             ))

@@ -151,5 +151,4 @@ const Skills = (props: any) => {
     </div>
   )
 }
-
 export default Skills

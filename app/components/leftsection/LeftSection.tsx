@@ -39,7 +39,7 @@ const LeftSection = () => {
       } else {
         console.log("No such document!");
       }
-    } 
+    }
     fetchData();
 
 

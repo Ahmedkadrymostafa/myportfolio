@@ -65,7 +65,7 @@ const BlogCard = (props: any) => {
    
   return (
     
-      <div className={`w-[${props.width}px] max-[768px]:w-full`}>
+      <div className={`w-${props.width} max-[768px]:w-full`}>
         <Link href={`/blogs/${props.link}`} className="">
           <div ref={cardRef}
             onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}

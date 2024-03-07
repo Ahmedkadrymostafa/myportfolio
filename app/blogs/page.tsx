@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     type: 'website',
   },
   twitter: {
-    title: 'Ahmed Kadry  - Blogs',
+    title: 'Ahmed Kadry - Blogs',
     description: 'Read my blogs and see the latest technology news and events',
     site: 'Ahmed Kadry',
     creator: "@AhmedKadry",
@@ -35,8 +35,10 @@ export const metadata: Metadata = {
 }
 
 const page = async () => {
+
   let blogs: any = [];
   const querySnapshot = await getDocs(collection(db, "blogs"))
+    
   querySnapshot.forEach((doc) => {
     blogs.push({data: doc.data(), id: doc.id})
   })
@@ -47,7 +49,7 @@ const page = async () => {
         <div className='flex flex-wrap gap-9'>
           {
             blogs.map((data: any) => (
-              <BlogCard width={330} key={data.id} link={data.id} img={data.data.imgurl} title={data.data.title} date={data.data.publishDate} author={data.data.author} />
+              <BlogCard width={80} key={data.id} link={data.id} img={data.data.imgurl} title={data.data.title} date={data.data.publishDate} author={data.data.author} />
             ))
             
           }
@@ -58,5 +60,5 @@ const page = async () => {
     </div>
   )
 }
-
+export const revalidate = 60
 export default page

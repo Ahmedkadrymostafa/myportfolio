@@ -12,7 +12,8 @@
   --right-sec-bg: #1e1e28;
   --landing-bg-overlay: linear-gradient(90deg, rgba(45, 45, 58, 0.9) 15%, rgba(45, 45, 58, 0.7) 50%, rgba(43, 43, 53, 0.7) 100%);
   /* texts  */
-  --main-color: #FFc107;
+  --main-color: #52D3D8;
+  /* --main-color: #FFc107; */
   --second-color: #fafafc;
   --third-color: #8c8c8e;
   --fourth-color: #191923;
@@ -27,7 +28,8 @@
   --overlay: linear-gradient(180deg,rgba(240,240,246,.93) 0%,rgba(240,240,246,.96) 70%,rgba(240,240,246,.99) 80%,rgba(240,240,246,1) 100%);
   --landing-bg-overlay: linear-gradient(90deg,rgba(45,45,58,.4) 15%,rgba(45,45,58,.3) 50%,rgba(43,43,53,.3) 100%);
   /* text  */
-  --main-color: #f46258;
+  --main-color: #ff9100;
+  /* --main-color: #f46258; */
   --second-color: #1e1e28;
   --third-color: #5c5c6f;
   --fourth-color: #c0c0ca;
