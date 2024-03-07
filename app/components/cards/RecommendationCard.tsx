@@ -5,7 +5,7 @@ import { TiStarFullOutline } from "react-icons/ti";
 const RecommendationCard = (props: any) => {
   return (
     <div>
-        <div className="relative p-5 main-bg mt-6 mb-9 h-[16rem] max-[768px]:w-full">
+        <div className="relative p-5 main-bg mt-6 mb-11 h-[16rem] max-[768px]:w-full">
                 <div className='absolute -top-6 right-8'>
                     <Image className='rounded-full' src={props.img} width={85} height={83} alt='rater image' />
                 </div>

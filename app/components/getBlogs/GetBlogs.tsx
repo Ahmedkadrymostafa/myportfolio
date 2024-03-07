@@ -10,7 +10,8 @@ import 'swiper/css/pagination';
 import { collection, query, where, getDocs } from "firebase/firestore";
 import { db } from '@/app/firebase/firebase';
 import { useState, useEffect } from 'react';
-import BlogCard from '../cards/BlogCard';
+import Link from 'next/link';
+import Image from 'next/image';
 const GetBlogs = () => {
     const [ blogsData, setBlogsData ] = useState<any>([]);
 
@@ -51,7 +52,7 @@ const GetBlogs = () => {
             slidesPerView: 2,
             spaceBetween: 20,
             },
-            924: {
+            1124: {
             slidesPerView: 3,
             spaceBetween: 20,
             },
@@ -68,7 +69,20 @@ const GetBlogs = () => {
             blogsData.map((doc: any) => (
                 <SwiperSlide  key={doc.id} >
                     <div className='mb-11 w-fit mx-auto'>
-                        <BlogCard width={64} link={doc.id} img={doc.data.imgurl} title={doc.data.title} author={doc.data.author} date={doc.data.publishDate} />
+                        <div className="w-64 max-[768px]:w-full">
+                            <Link href={`/blogs/${doc.id}`}>
+                              <div>                               
+                                  <div className="flex flex-col">
+                                    <Image src={doc.data.imgurl} className="w-auto" priority={true} width={330} height={210} alt="blog image"/>
+                                    <div className="main-bg p-3 flex flex-col gap-2 w-full">
+                                        <p className="yellow w-fit ml-auto text-xs">{`Published ${doc.data.publishDate}`}</p>
+                                        <p className="white line-clamp-2 text-ellipsis">{doc.data.title}</p>
+                                        <p className="text-sm light-gray capitalize">{`by ${doc.data.author}`}</p>
+                                    </div>
+                                  </div>
+                              </div>
+                            </Link>
+                          </div>
                     </div>
                 </SwiperSlide>
             ))

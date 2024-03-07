@@ -65,7 +65,7 @@ export default function HoverCard(props: any) {
     
     return (
       <div>
-        <Link href="/contact" className="w-[26rem] h-52 inline-block max-[768px]:w-full">
+        <Link href="/contact" className="w-[25rem] h-56 inline-block max-[768px]:w-full">
           <div ref={cardRef}
             onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}
             className="relative main-bg service-card h-full">

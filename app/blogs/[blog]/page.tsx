@@ -30,7 +30,7 @@ return {
     title: data.title,
     description: data.description,
     openGraph: {
-    title: 'Ahmed Kadry',
+    title: 'Blogs - Ahmed Kadry',
     description: data.title,
     url: 'https://www.akadry.me',
     siteName: 'Ahmed Kadry',

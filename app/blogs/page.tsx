@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   title: 'Blogs',
   description: 'Read my blogs and see the latest technology news and events',
   openGraph: {
-    title: 'Ahmed Kadry - Blogs',
+    title: 'Blogs - Ahmed Kadry',
     description: 'Read my blogs and see the latest technology news and events',
     url: 'https://www.akadry.me',
     siteName: 'Ahmed Kadry',

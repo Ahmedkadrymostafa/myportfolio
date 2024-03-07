@@ -33,7 +33,7 @@ const Services = () => {
   return (
     <div className="relative z-10 m-6">
         <Heading title="my services" />
-        <div className="flex justify-between flex-wrap gap-8">
+        <div className="flex justify-around flex-wrap gap-8">
 
             {
                 servicesData.map((item) => (

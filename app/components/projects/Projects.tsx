@@ -44,7 +44,7 @@ const Projects = () => {
   return (
     <div className='relative z-10 main-margin' id="projects">
         <Heading title="projects" />
-       <div className="relative flex flex-wrap gap-x-9 gap-y-7  overflow-hidden max-[852px]:justify-center">
+       <div className="relative flex justify-around flex-wrap gap-x-9 gap-y-7  overflow-hidden max-[852px]:justify-center">
            
             {projectsData.map((project) => (
                 <Link key={project.id} href={`${"/" + project.id}`}>
