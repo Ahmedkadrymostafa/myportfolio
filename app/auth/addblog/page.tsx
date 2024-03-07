@@ -131,8 +131,6 @@ const Page = () => {
                       setBlog(e.target.value)
                   }} />
                   <input type="submit" value="create blog" onClick={(e: any) => {
-                      // e.preventDefault();
-                      // console.log(blog)
                       addBlog(e);
                   }} />        
               </form>

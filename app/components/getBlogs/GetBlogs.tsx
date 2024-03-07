@@ -12,6 +12,7 @@ import { db } from '@/app/firebase/firebase';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+
 const GetBlogs = () => {
     const [ blogsData, setBlogsData ] = useState<any>([]);
 
@@ -48,7 +49,15 @@ const GetBlogs = () => {
             slidesPerView: 1,
             spaceBetween: 20,
             },
+            624: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+            },
             768: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+            },
+            924: {
             slidesPerView: 2,
             spaceBetween: 20,
             },
@@ -68,8 +77,8 @@ const GetBlogs = () => {
         {
             blogsData.map((doc: any) => (
                 <SwiperSlide  key={doc.id} >
-                    <div className='mb-11 w-fit mx-auto'>
-                        <div className="w-64 max-[768px]:w-full">
+                    <div className='mb-11'>
+                        <div className="w-auto">
                             <Link href={`/blogs/${doc.id}`}>
                               <div>                               
                                   <div className="flex flex-col">
