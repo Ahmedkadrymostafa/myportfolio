@@ -55,7 +55,9 @@ const Projects = () => {
                             <p className="light-gray text-sm mb-3">{project.data.heading}</p>
                             <div className="flex justify-between mb-3">
                                 <Button link={`${"/" + project.id}`} title="details" />
-                                <Link href={project.data.livelink} className="yellow text-sm flex items-center">Live<FaEye className="ml-1" /></Link>
+                                {project.data.livelink !== "" && 
+                                    <Link href={project.data.livelink} className="yellow text-sm flex items-center">Live<FaEye className="ml-1" /></Link>
+                                }
                             </div>
                         </div>          
                     </div>
